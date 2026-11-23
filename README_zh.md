@@ -8,8 +8,8 @@ M1 EDU 是元点智能 M1 人形机器人学习、训练和部署强化学习策
 
 | 目标 | 仓库 |
 | --- | --- |
-| 在仿真环境中训练和评估策略 | [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train) |
-| 将导出的 ONNX 策略部署到机器人 | [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy) |
+| 在仿真环境中训练和评估策略 | [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train) |
+| 将导出的 ONNX 策略部署到机器人 | [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy) |
 
 <div align="center">
   <img src="assets/m1-edu-lab.png" alt="M1 EDU 开发工作台" width="760">
@@ -27,19 +27,19 @@ M1 EDU 是元点智能 M1 人形机器人学习、训练和部署强化学习策
 M1 EDU 机器人
       │
       ├── 仿真与策略训练
-      │       └── Zeroth-M1_EDU_Train
+      │       └── M1_EDU_Train
       │
       ├── 将策略导出为 ONNX
       │
       └── 机器人端策略部署
-              └── Zeroth-M1_EDU_Deploy
+              └── M1_EDU_Deploy
 ```
 
 两个代码仓库保持独立维护。训练依赖、仿真资源、检查点和实验日志归属于训练仓库。机器人连接代码、部署配置、ONNX 模型和运行示例归属于部署仓库。本仓库提供统一入口和工作流说明。
 
 ## 训练
 
-环境配置和命令请进入 [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train) 查看。
+环境配置和命令请进入 [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train) 查看。
 
 训练仓库当前说明的技术栈包括：
 
@@ -59,7 +59,7 @@ python JOYIn_gym/legged_gym/scripts/train.py --task=mini1_18dof_walk --num_envs=
 
 ## 导出与部署
 
-在仿真环境中验证策略后，请按照 [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy) 中的说明，将策略导出为部署运行时需要的格式并部署到机器人。
+在仿真环境中验证策略后，请按照 [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy) 中的说明，将策略导出为部署运行时需要的格式并部署到机器人。
 
 部署仓库当前包含以下内容：
 
@@ -86,14 +86,14 @@ python demo_walk.py --model=model/your_model_name.onnx
 - 链接持续维护的公开仓库
 - 记录适用于整个工作流的项目级说明
 
-### [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train)
+### [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train)
 
 - 包含 Isaac Gym 训练环境
 - 包含 M1 任务配置和训练脚本
 - 包含 `JOYIn_gym` 与 `rsl_rl` 源码目录
 - 包含由该仓库管理的仿真资源和实验输出
 
-### [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy)
+### [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy)
 
 - 包含 ROS 2 部署示例
 - 包含机器人通信和控制代码
@@ -102,4 +102,4 @@ python demo_walk.py --model=model/your_model_name.onnx
 
 ## 获取帮助
 
-训练失败、任务配置或仿真行为问题，请在 [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train) 中提交 Issue。机器人连接、ROS 2 运行时、策略加载或部署失败，请在 [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy) 中提交 Issue。项目级文档和导航问题请在本仓库反馈。
+训练失败、任务配置或仿真行为问题，请在 [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train) 中提交 Issue。机器人连接、ROS 2 运行时、策略加载或部署失败，请在 [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy) 中提交 Issue。项目级文档和导航问题请在本仓库反馈。

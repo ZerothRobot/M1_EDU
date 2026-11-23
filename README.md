@@ -8,8 +8,8 @@ M1 EDU is the public entry point for learning, training, and deploying reinforce
 
 | Goal | Repository |
 | --- | --- |
-| Train and evaluate policies in simulation | [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train) |
-| Deploy an exported ONNX policy on the robot | [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy) |
+| Train and evaluate policies in simulation | [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train) |
+| Deploy an exported ONNX policy on the robot | [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy) |
 
 <div align="center">
   <img src="assets/m1-edu-lab.png" alt="M1 EDU development workspace" width="760">
@@ -27,19 +27,19 @@ M1 EDU is the public entry point for learning, training, and deploying reinforce
 M1 EDU hardware
       │
       ├── simulation and policy training
-      │       └── Zeroth-M1_EDU_Train
+      │       └── M1_EDU_Train
       │
       ├── policy export to ONNX
       │
       └── robot-side policy deployment
-              └── Zeroth-M1_EDU_Deploy
+              └── M1_EDU_Deploy
 ```
 
 The two code repositories are intentionally maintained separately. Training dependencies, simulation assets, checkpoints, and experiment logs belong in the training repository. Robot connection code, deployment configuration, ONNX models, and runtime examples belong in the deployment repository. This repository provides the shared entry point and workflow documentation.
 
 ## Training
 
-Open [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train) for the supported environment setup and commands.
+Open [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train) for the supported environment setup and commands.
 
 The current training repository documents the following stack:
 
@@ -59,7 +59,7 @@ Use the training repository README as the source of truth for installation detai
 
 ## Export and deployment
 
-After a policy has been validated in simulation, export it in the format expected by the deployment runtime and follow the instructions in [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy).
+After a policy has been validated in simulation, export it in the format expected by the deployment runtime and follow the instructions in [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy).
 
 The deployment repository currently documents:
 
@@ -86,14 +86,14 @@ The policy configuration used during deployment must match the configuration use
 - links the maintained public repositories
 - records project-level guidance that applies across the workflow
 
-### [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train)
+### [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train)
 
 - contains the Isaac Gym training environment
 - contains the M1 task configuration and training scripts
 - contains the bundled `JOYIn_gym` and `rsl_rl` source trees
 - contains simulation resources and experiment outputs tracked by that repository
 
-### [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy)
+### [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy)
 
 - contains the ROS 2 deployment examples
 - contains robot communication and control code
@@ -102,4 +102,4 @@ The policy configuration used during deployment must match the configuration use
 
 ## Getting help
 
-For training failures, task configuration, or simulation behavior, open an issue in [Zeroth-M1_EDU_Train](https://github.com/ZerothRobot/Zeroth-M1_EDU_Train). For robot connectivity, ROS 2 runtime behavior, policy loading, or deployment failures, open an issue in [Zeroth-M1_EDU_Deploy](https://github.com/ZerothRobot/Zeroth-M1_EDU_Deploy). Use this repository for project-level documentation and navigation issues.
+For training failures, task configuration, or simulation behavior, open an issue in [M1_EDU_Train](https://github.com/ZerothRobot/M1_EDU_Train). For robot connectivity, ROS 2 runtime behavior, policy loading, or deployment failures, open an issue in [M1_EDU_Deploy](https://github.com/ZerothRobot/M1_EDU_Deploy). Use this repository for project-level documentation and navigation issues.
